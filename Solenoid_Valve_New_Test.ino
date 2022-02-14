@@ -4,8 +4,8 @@
 
 LiquidCrystal_I2C lcd = LiquidCrystal_I2C(0x27, 16, 2); 
 ezButton button (12); // Flush Button
-#define echoPin 4 //ultrasonic echo pin
-#define trigPin 5 //ultrasonic trigger pin
+#define echoPin 8 //ultrasonic echo pin
+#define trigPin 9 //ultrasonic trigger pin
 
 long duration, cm; //Ultrasonic duration variable
 int distance; //distance variable
@@ -46,7 +46,7 @@ void setup() {
   Serial.begin(38400);
 
   // INIT RELAY
-  pinMode (8, OUTPUT);
+  pinMode (5, OUTPUT);
 
   //INIT FLUSH BUTTON
   pinMode(inPin, INPUT);
